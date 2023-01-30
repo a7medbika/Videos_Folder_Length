@@ -101,9 +101,21 @@ namespace Videos_Folder_Length
 
                     // 0 : Hours, 1 : Mins, 2 : Secs
                     string[] Times = duration.Split(':');
-                    Hours += Convert.ToInt32(Times[0]);
-                    Mins += Convert.ToInt32(Times[1]);
-                    Secs += Convert.ToInt32(Times[2]);
+
+                    
+
+                    try
+                    {
+                        Hours += Convert.ToInt32(Times[0]);
+                        Mins += Convert.ToInt32(Times[1]);
+                        Secs += Convert.ToInt32(Times[2]);
+                    }
+                    catch
+                    {
+                       
+                        System.Windows.MessageBox.Show("There is a problem at the following file: \n\n"
+                            + file + "\n\nWill be ignored", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
 

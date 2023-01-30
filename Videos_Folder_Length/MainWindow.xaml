@@ -243,9 +243,10 @@
                                    Text="0" FontSize="20" FontWeight="Bold"/>
                         
                     </Grid>
-                    
-                    
-                    
+                    <TextBlock Text="This application was developed by BIKA" 
+                               FontWeight="Bold" FontSize="10"
+                               HorizontalAlignment="Center" Margin="0,85"/>
+
                 </StackPanel>
                 
             </Grid>
